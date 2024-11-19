@@ -1,20 +1,20 @@
 const prompt = require('prompt-sync')();
 
 // Utilidades
-const esLetraValida = (letra) => /^[a-z]$/.test(letra);
+export const esLetraValida = (letra) => /^[a-z]$/.test(letra);
 
-const palabraContieneLetra = (palabra, letra) => palabra.includes(letra);
+export const palabraContieneLetra = (palabra, letra) => palabra.includes(letra);
 
-const letraYaUsada = (letra, letrasUsadas) => letrasUsadas.includes(letra);
+export const letraYaUsada = (letra, letrasUsadas) => letrasUsadas.includes(letra);
 
-const esVictoria = (listaPalabra, palabraAdivinada) =>
+export const esVictoria = (listaPalabra, palabraAdivinada) =>
   listaPalabra.join('') === palabraAdivinada;
 
-const esVictoriaImpecable = (listaPalabra, palabraAdivinada, intentos) =>
+export const esVictoriaImpecable = (listaPalabra, palabraAdivinada, intentos) =>
   listaPalabra.join('') === palabraAdivinada && intentos === 0;
 
 // Juego principal
-const juegoPrincipal = () => {
+export const juegoPrincipal = () => {
   // Elige una palabra para que un jugador adivine
   const palabra = prompt(
     'Ingresa una palabra para que otro jugador adivine: '
